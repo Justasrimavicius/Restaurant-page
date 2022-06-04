@@ -11,3 +11,23 @@ body{
 h1{
     font-size: 100px;
 }
+h2{
+    font-size: 50px;
+}
+p{
+    font-size: 20px;
+    
+}
+#food-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#food-div div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
