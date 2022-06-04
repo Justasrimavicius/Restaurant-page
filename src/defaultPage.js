@@ -1,45 +1,7 @@
-import css from "./style.css";
-import defaultPage from './defaultPage.js';
-import page1 from './page1.js';
-import page2 from './page2.js';
-import page3 from './page3.js';
+export default function defaultPage(){
+
 
 let content=document.getElementById('content');
-const header=document.createElement('div');
-header.id='header';
-const btnDefault=document.createElement('button');
-btnDefault.innerText='Main';
-const btn1=document.createElement('button');
-btn1.innerText='Chia';
-const btn2=document.createElement('button');
-btn2.innerText='Bowl';
-const btn3=document.createElement('button');
-btn3.innerText='Wrap';
-header.append(btnDefault,btn1,btn2,btn3);
-
-btnDefault.addEventListener('click',function(){
-    content.innerHTML='';
-    content.append(header);
-    content=defaultPage(); 
-});
-btn1.addEventListener('click',function(){
-    content.innerHTML='';
-    content.append(header);
-    content=page1();
-});
-btn2.addEventListener('click',function(){
-    content.innerHTML='';
-    content.append(header);
-    content=page2();
-});
-btn3.addEventListener('click',function(){
-    content.innerHTML='';
-    content.append(header);
-    content=page3();
-});
-
-
-
 const heading=document.createElement('h1');
 heading.innerText='My amazing Restaurant';
 
@@ -48,7 +10,7 @@ headingSmall.innerText='Our todays food looks like this:';
 
 const foodDiv=document.createElement('div');
 foodDiv.id='food-div';
-
+const penus='a';
     const bowlText=document.createElement('p');
     bowlText.innerText='This chia bowl is packed with fiber, low in sugar, and is the perfect breakfast to fuel you for the day!';
     const bowlImg=document.createElement('img');
@@ -75,4 +37,6 @@ foodDiv.id='food-div';
 
     foodDiv.append(bowlDiv,ketoDiv,wrapDiv);
 
-content.append(header,heading,headingSmall,foodDiv);
+content.append(heading,headingSmall,foodDiv);
+return content;
+};
